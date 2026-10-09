@@ -1,0 +1,16 @@
+QSkill Task 6 — Demo Script
+
+1. Start the assistant.
+2. Enter:
+   My name is Atharva and I study Computer Engineering.
+3. Enter:
+   What is my name and what do I study?
+   Expected behavior: Gemini answers using the previous interaction state.
+4. Enter:
+   What is the current price of Bitcoin in USD?
+   Expected behavior: with Google Search grounding enabled, Gemini searches current public web information and can return source citations.
+5. Enter:
+   /reset
+6. Enter:
+   What is my name?
+   Expected behavior: the previous conversation has been reset, so the assistant should not know the earlier name from that state.

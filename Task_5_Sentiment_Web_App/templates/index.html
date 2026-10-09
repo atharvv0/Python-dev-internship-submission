@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <p class="eyebrow">Python + Flask + TextBlob</p>
+            <h1>Sentiment Analyzer</h1>
+            <p class="subtitle">Enter a sentence and analyze its sentiment, polarity, and subjectivity.</p>
+
+            <form method="POST">
+                <label for="text">Text to analyze</label>
+                <textarea id="text" name="text" rows="7" placeholder="Type something here...">{{ text }}</textarea>
+                <button type="submit">Analyze Sentiment</button>
+            </form>
+
+            {% if error %}
+                <div class="message error">{{ error }}</div>
+            {% endif %}
+
+            {% if result %}
+                <section class="result">
+                    <div class="badge">{{ result.label }}</div>
+                    <div class="metrics">
+                        <div>
+                            <span>Polarity</span>
+                            <strong>{{ "%.3f"|format(result.polarity) }}</strong>
+                            <small>-1 (negative) to +1 (positive)</small>
+                        </div>
+                        <div>
+                            <span>Subjectivity</span>
+                            <strong>{{ "%.3f"|format(result.subjectivity) }}</strong>
+                            <small>0 (objective) to 1 (subjective)</small>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

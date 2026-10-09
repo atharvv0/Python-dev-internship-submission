@@ -1,0 +1,31 @@
+Student Performance Analysis — Generated Output
+
+Dataset size: 30 rows x 6 columns
+
+Key statistics
+--------------
+Average exam score: 79.43
+Highest exam score: 95.00
+Lowest exam score: 58.00
+Average attendance: 85.60%
+Average study hours: 5.03
+
+Average exam score by department
+--------------------------------
+Department
+Computer      82.09
+IT            80.60
+Mechanical    74.89
+
+Insights
+--------
+1. Computer has the highest average exam score in this sample.
+2. The correlation between study hours and exam score is 0.99.
+3. The correlation between attendance and exam score is 0.98.
+4. The generated bar chart, scatter plot, and heatmap provide visual support for these observations.
+
+Files generated
+---------------
+- bar_chart_department_scores.png
+- scatter_study_vs_exam.png
+- heatmap_correlations.png
